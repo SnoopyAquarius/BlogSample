@@ -1,0 +1,87 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/demo.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>个人博客 - 登录</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<link href="style/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/search.js"></script>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="index.html"><div id="logo" title="个人博客 - blog"></div></a>
+			<!-- InstanceBeginEditable name="nav" -->
+			<a href="login.html"><div id="user" title="登录"></div></a>
+			<div id="nav">
+                <ul>
+                    <li><a href="index.html" title="首页">首页</a></li>
+                    <li><a href="list.html" title="文章列表">文章列表</a></li>
+                    <li><a href="message.html" title="留言">留言</a></li>
+                    <li><a href="about.html" title="关于">关于</a></li>
+				</ul>
+			  </div>
+			<!-- InstanceEndEditable -->
+			<div id="music">
+				<img src="images/music.png" alt="music" id="img" onClick="timeout ? stopAnim() : startAnim()" oncontextmenu="return false;" title="点击暂停">
+				<audio loop hidden="true" id="audio">
+					<source src="audio/bgm.mp3" type="audio/mpeg">
+					<source src="audio/bgm.ogg" type="audio/ogg">
+				</audio>
+				<script type="text/javascript" src="js/music.js"></script>
+			</div>
+		</div>
+		<div id="content">
+			<!-- InstanceBeginEditable name="content_left" -->
+			<div id="content_left">
+				<p class="title_big">登录</p>
+				<div class="box_left">
+					<form class="_login">
+						<div class="login">
+							用户名：<input type="text" name="username" required autocomplete="off">
+						</div>
+						<div class="login">
+							密<span style="padding-left: 1em"></span>码：<input type="password" name="password" required autocomplete="off">
+						</div>
+						<div class="login_submit">
+						  <input type="submit" name="login" value="登录">
+						</div>
+					 	<div class="click_here">
+						  还没有帐号?<a href="register.html">点此注册</a>
+						</div>
+					</form>
+				</div>
+			</div>
+        	<!-- InstanceEndEditable -->
+			<div id="content_right">
+				<p class="title_big">搜索</p>
+				<div class="box_right_search">
+					<form class="search">
+						<input type="text" name="search" id="search_put" placeholder="请输入您要搜索的内容..." required autocomplete="off" onKeyPress="return enterit(event,'search_put')" onKeyDown="return enterit(event,'search_put')">
+						<input type="button" class="search_image" value=" " name="search_image" onClick="javascript:clickit('search_put')" title="百度搜索">
+					</form>
+				</div>
+				<p class="title_big">最近更新</p>
+				<div class="box_right">
+					<ul>
+						<li><a href="article/1.html">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+						<li><a href="article/2.html">『这些没头没脑的汉化翻译，害我笑出了声』</a></li>
+						<li><a href="article/3.html">『用了 Emoji 后，App 的吸引力能翻倍？🤔 | 灵感早读』</a></li>
+						<li><a href="#">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+						<li><a href="#">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+						<li><a href="#">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+					</ul>
+				</div>
+			</div>
+        </div>
+        <div id="footer">
+            <p align="center">CopyRight &copy; 2017 冯彦涵.</p>
+        </div>
+    </div>
+</body>
+<!-- InstanceEnd --></html>

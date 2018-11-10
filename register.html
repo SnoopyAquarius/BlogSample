@@ -1,0 +1,116 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/demo.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>个人博客 - 注册</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<link href="style/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/search.js"></script>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="index.html"><div id="logo" title="个人博客 - blog"></div></a>
+			<!-- InstanceBeginEditable name="nav" -->
+			<a href="login.html"><div id="user" title="登录"></div></a>
+			<div id="nav">
+                <ul>
+                    <li><a href="index.html" title="首页">首页</a></li>
+                    <li><a href="list.html" title="文章列表">文章列表</a></li>
+                    <li><a href="message.html" title="留言">留言</a></li>
+                    <li><a href="about.html" title="关于">关于</a></li>
+				</ul>
+			  </div>
+			<!-- InstanceEndEditable -->
+			<div id="music">
+				<img src="images/music.png" alt="music" id="img" onClick="timeout ? stopAnim() : startAnim()" oncontextmenu="return false;" title="点击暂停">
+				<audio loop hidden="true" id="audio">
+					<source src="audio/bgm.mp3" type="audio/mpeg">
+					<source src="audio/bgm.ogg" type="audio/ogg">
+				</audio>
+				<script type="text/javascript" src="js/music.js"></script>
+			</div>
+		</div>
+		<div id="content">
+			<!-- InstanceBeginEditable name="content_left" -->
+			<div id="content_left">
+				<p class="title_big">注册</p>
+				<div class="box_left">
+					<form class="_register">
+						<div class="register">
+							<span style="padding-left: 1em;color: red">*</span>用户名:<input type="text" required autocomplete="off" name="username" placeholder="请输入3-15个英文" pattern="^\w{3,15}$">
+						</div>
+						<div class="register">
+							<span class="blank">*</span>密码:<input type="password" required autocomplete="off" name="password" id="password1" onKeyUp="check()">
+						</div>
+						<div class="register">
+							<span style="color: red">*</span>确认密码:<input type="password" required autocomplete="off" name="_password" id="password2" onKeyUp="check()"><span id="prompt" onSelectStart="return false"></span>
+						</div>
+						<div class="register">
+							<span class="blank">*</span>邮箱:<input type="email" required autocomplete="off" name="email">
+						</div>
+						<div class="register">
+							<span style="padding-left: 2.5em"></span>生日:<input type="date" autocomplete="off" name="birthday" value="1990-01-01" min="1920-01-01" max="2017-12-29" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+						</div>
+						<div class="register_submit">
+							<input type="submit" value="注册" id="register_submit" disabled>
+						</div>
+						<div class="click_here">
+							已经有帐号?<a href="login.html">点此登录</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script type="text/javascript">
+				function check(){
+					var password1 = document.getElementById("password1").value;
+					var password2 = document.getElementById("password2").value;
+					var register = document.getElementById("register_submit");
+					var prompt = document.getElementById("prompt");
+					if(password1 === password2) {
+						register.disabled = false;
+						prompt.innerHTML = "<font color='green'>✔</font>";
+					}
+					else {
+						register.disabled = true;
+						prompt.innerHTML = "<font color='red'>两次输入密码不同!</font>";
+					}
+					if(password2 == "") {
+						register.disabled = true;
+						prompt.innerHTML = "";
+					}
+				}
+			</script>
+        	<!-- InstanceEndEditable -->
+			<div id="content_right">
+				<p class="title_big">搜索</p>
+				<div class="box_right_search">
+					<form class="search">
+						<input type="text" name="search" id="search_put" placeholder="请输入您要搜索的内容..." required autocomplete="off" onKeyPress="return enterit(event,'search_put')" onKeyDown="return enterit(event,'search_put')">
+						<input type="button" class="search_image" value=" " name="search_image" onClick="javascript:clickit('search_put')" title="百度搜索">
+					</form>
+				</div>
+				<p class="title_big">最近更新</p>
+				<div class="box_right">
+					<ul>
+						<li><a href="article/1.html">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+						<li><a href="article/2.html">『这些没头没脑的汉化翻译，害我笑出了声』</a></li>
+						<li><a href="article/3.html">『用了 Emoji 后，App 的吸引力能翻倍？🤔 | 灵感早读』</a></li>
+						<li><a href="#">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+						<li><a href="#">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+						<li><a href="#">『电脑桌面文件超乱？教你 3 大绝招快速整理』</a></li>
+					</ul>
+				</div>
+			</div>
+        </div>
+        <div id="footer">
+            <p align="center">CopyRight &copy; 2017 冯彦涵.</p>
+        </div>
+    </div>
+</body>
+<!-- InstanceEnd --></html>
